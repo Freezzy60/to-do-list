@@ -38,12 +38,13 @@ function TodoList() {
            return todo;
        });
        setTodos(updatedTodos)
-   }
+    }
+    console.log(todos);
    
 
     return (
         <div>
-          <h1>What´s the Plan for Today ?</h1>
+          <h1>What's the Plan for Today ?</h1>
           <TodoForm onSubmit={addTodo}/>  
           <Todo
           todos={todos}

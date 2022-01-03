@@ -13,18 +13,17 @@ function TodoForm(probs) {
         setInput(e.target.value);
     }
 
-    {/* function that the site when click on button don´t refresh */ }
+    /* function that the site when click on button don´t refresh */ 
     const handleSubmit = e => {
         e.preventDefault();
 
-        {/*genarirt eine random id bis 1000 */ }
+        /*genarirt eine random id bis 1000 */ 
         probs.onSubmit({
             id: Math.floor(Math.random() * 1000),
             text: input
         });
         setInput('');
     };
-
 
 
     return (
@@ -41,23 +40,23 @@ function TodoForm(probs) {
                             ref={inputRef}
                         />
                         <button className="todo-button">Add todo</button>
-                        </>
-                        ) : (
-                        <>
-                            <input
-                                placeholder="Add a todo"
-                                value={input}
-                                name="text"
-                                className="todo-input"
-                                onChange={handleChange}
-                                ref={inputRef}
-                            />
-                            <button className="todo-button">Add todo</button>
-                            </>
-                 )}
-                        </form>
-                    </div>
-                )
+                    </>
+                ) : (
+                    <>
+                        <input
+                            placeholder="Add a todo"
+                            value={input}
+                            name="text"
+                            className="todo-input"
+                            onChange={handleChange}
+                            ref={inputRef}
+                        />
+                        <button className="todo-button">Add todo</button>
+                    </>
+                )}
+            </form>
+        </div>
+    )
 }
 
-                export default TodoForm
+export default TodoForm
